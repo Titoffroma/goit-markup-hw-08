@@ -1,0 +1,60 @@
+.hover-text {
+  background: $hover-text-bg-color;
+  color: $white-color;
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  height: 100%;
+  width: 100%;
+  padding: 63px 24px;
+  top: 100%;
+  position: absolute;
+  transition: top $transition-fuction;
+}
+
+.portfolio-listitem {
+  display: inline-block;
+  width: 100%;
+  transition: box-shadow $transition-fuction;
+
+  div:first-child {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      0px 1px 1px rgba(0, 0, 0, 0.12);
+    & .hover-text {
+      top: 0px;
+    }
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.portfolio-listitem-div {
+  border: 1px solid #eeeeee;
+  border-top: none;
+  padding: 20px 24px 20px;
+  position: relative;
+  background: $white-color;
+  h4 {
+    color: $title-color;
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 36px;
+    & + p {
+      color: $text-color;
+      font-family: $main-font;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 30px;
+      margin-top: 4px;
+    }
+  }
+}

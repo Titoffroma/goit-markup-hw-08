@@ -1,0 +1,40 @@
+.header-menu-list {
+  display: flex;
+  margin-left: 85px;
+  & :not(:first-child) {
+    margin-left: 50px;
+  }
+}
+
+.header-menu-listitem {
+  display: block;
+}
+
+.header-menu-list a {
+  color: $title-color;
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 14px;
+  transition: color $transition-fuction;
+  display: flex;
+  padding: 32px 0px;
+  &:hover,
+  &:focus {
+    color: $main-color;
+  }
+}
+
+.header-menu-list .actual-page {
+  position: relative;
+  color: $main-color;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: $main-color;
+    border-radius: 2px;
+    height: 4px;
+  }
+}

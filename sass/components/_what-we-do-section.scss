@@ -1,0 +1,45 @@
+.adaptive-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+@media screen and (min-width: 1200px) {
+  .adaptive-hidden {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0px auto 0px;
+    border: 0;
+    padding: 0px 0px 94px;
+    clip: auto;
+    overflow: hidden;
+  }
+}
+.what-we-do-list {
+  display: flex;
+}
+.what-we-do-list-item {
+  position: relative;
+  width: calc((100% - 30px * 2) / 3);
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+.what-we-do-list-header {
+  color: $white-color;
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 70px;
+  background-color: $overlay-color;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}

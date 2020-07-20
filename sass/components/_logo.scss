@@ -1,0 +1,13 @@
+.logo {
+  color: $main-color;
+  font-family: $logo-font;
+  font-weight: 700;
+  font-size: 26px;
+
+  & > span {
+    color: $black-color;
+  }
+  & > .inverse {
+    color: $white-color;
+  }
+}

@@ -1,0 +1,22 @@
+.mainimage {
+  background: linear-gradient($overlay-color, $overlay-color),
+    url("../img/Header-img-condensed.jpg") no-repeat center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+  h1 {
+    color: $white-color;
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 44px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    width: 650px;
+    text-align: center;
+  }
+}

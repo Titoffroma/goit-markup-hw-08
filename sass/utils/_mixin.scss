@@ -1,0 +1,38 @@
+@function Margin-in-row($margin, $cols) {
+  $result: $margin * ($cols - 1);
+  @return $result;
+}
+@mixin Cardset-Adaptive-480-768-1200(
+  $ClassName,
+  $ScreenWidth,
+  $Margin-right,
+  $Margin-bottom,
+  $Columns
+) {
+  $margin-in-row: Margin-in-row($Margin-right, $Columns);
+  @if ($Columns == 0) {
+    $Columns: #{$Columns} + 1;
+  } @else {
+    @if ($ScreenWidth > 0) {
+      @media screen and (min-width: #{$ScreenWidth}) {
+        #{$ClassName} {
+          display: flex;
+          flex-wrap: wrap;
+          & > li {
+            width: calc((100% - #{$margin-in-row}) / #{$Columns});
+            &:nth-child(n) {
+              margin-right: $Margin-right;
+              margin-bottom: $Margin-bottom;
+            }
+            &:nth-child(#{$Columns}n) {
+              margin-right: 0px;
+            }
+            &:nth-last-child(-n + #{$Columns}) {
+              margin-bottom: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

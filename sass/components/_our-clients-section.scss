@@ -1,0 +1,44 @@
+@include Cardset-Adaptive-480-768-1200(
+  ".our-clients-list",
+  480px,
+  30px,
+  30px,
+  2
+);
+
+@include Cardset-Adaptive-480-768-1200(
+  ".our-clients-list",
+  768px,
+  30px,
+  30px,
+  3
+);
+
+@include Cardset-Adaptive-480-768-1200(
+  ".our-clients-list",
+  1200px,
+  30px,
+  30px,
+  6
+);
+.our-clients-listitem {
+  a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    fill: $social-icon-color;
+    border: 1px solid $social-icon-color;
+    border-radius: 4px;
+    transition: fill $transition-fuction, border-color $transition-fuction;
+    &:hover,
+    &:focus {
+      fill: $main-color;
+      border-color: $main-color;
+    }
+  }
+}
+.our-clients-icon {
+  width: 170px;
+  height: 90px;
+}

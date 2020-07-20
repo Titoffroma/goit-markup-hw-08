@@ -1,0 +1,22 @@
+.social-container {
+  display: flex;
+  li:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+.social-icon {
+  height: 44px;
+  width: 44px;
+}
+.social {
+  display: block;
+  line-height: 0px;
+  fill: $social-icon-color;
+  border-radius: 50%;
+  transition: fill $transition-fuction, background $transition-fuction;
+  &:hover,
+  &:focus {
+    fill: $white-color;
+    background: $main-color;
+  }
+}

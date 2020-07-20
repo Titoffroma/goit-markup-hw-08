@@ -1,0 +1,39 @@
+.our-team-section {
+  background-color: #f5f4fa;
+}
+.our-team-list-item {
+  background-color: $white-color;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+
+  h4 {
+    color: $title-color;
+    font-family: $main-font;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 30px 0px 0px;
+    text-align: center;
+  }
+  img {
+    width: 100%;
+  }
+  p {
+    color: $text-color;
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 10px 0px 0px;
+    text-align: center;
+  }
+}
+@include Cardset-Adaptive-480-768-1200(".our-team-list", 480px, 0px, 30px, 1);
+
+@include Cardset-Adaptive-480-768-1200(".our-team-list", 768px, 30px, 30px, 2);
+
+@include Cardset-Adaptive-480-768-1200(".our-team-list", 1200px, 30px, 30px, 4);
+.our-team-social {
+  padding: 16px 32px 24px;
+  justify-content: center;
+  align-items: center;
+}

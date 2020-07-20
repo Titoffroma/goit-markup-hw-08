@@ -1,0 +1,25 @@
+.container {
+  width: calc(100vw - 30px);
+  max-width: 1170px;
+  margin: 0px auto 0px;
+}
+.container-padding {
+  padding: 94px 0px 94px;
+}
+.cropped-container {
+  padding-top: 0px;
+}
+section h2 {
+  color: $title-color;
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 50px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.portfolio {
+  padding: 94px 0px 94px;
+  border-top: 1px solid #ececec;
+}

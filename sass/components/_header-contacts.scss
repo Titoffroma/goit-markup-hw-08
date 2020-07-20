@@ -1,0 +1,32 @@
+.header-contacts-list {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-contacts-listitem {
+  &:not(:first-child) {
+    margin-left: 30px;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    color: $text-color;
+    font-family: $main-font;
+    font-weight: 500;
+    font-size: 14px;
+    font-style: normal;
+    transition: color $transition-fuction, fill $transition-fuction;
+    fill: $text-color;
+    &:hover,
+    &:focus {
+      color: $main-color;
+      fill: $main-color;
+    }
+  }
+}
+
+.header-adress-icon {
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+}

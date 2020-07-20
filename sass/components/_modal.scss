@@ -1,0 +1,195 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: $backdrop-bg-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: $transition-fuction;
+  z-index: 100;
+  form {
+    max-height: 100%;
+    overflow: auto;
+  }
+}
+
+.modal-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $white-color;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: $text-color;
+  padding: 40px;
+  position: relative;
+  transform: scale(1);
+  transition: $transition-fuction;
+
+  textarea {
+    border: 1px solid $input-border-color;
+    border-radius: 4px;
+    resize: none;
+    width: 448px;
+    margin-bottom: 20px;
+    padding: 12px 16px;
+    transition: $transition-fuction;
+    transition-property: border, transform;
+    color: $text-color;
+    &:focus {
+      outline: none;
+      border: 1px solid $main-color;
+    }
+    &:focus ~ span {
+      transform: translate(-16px, -32px);
+      color: $main-color;
+      font-size: 12px;
+    }
+    &:not(:placeholder-shown) ~ span {
+      transform: translate(-16px, -32px);
+      font-size: 12px;
+      cursor: default;
+    }
+  }
+  input {
+    &:not([type="checkbox"]) {
+      border: 1px solid $input-border-color;
+      border-radius: 4px;
+      width: 448px;
+      height: 40px;
+      transition: border $transition-fuction;
+    }
+    &:not(:placeholder-shown) {
+      padding-left: 42px;
+      &:not([type="checkbox"]) ~ span {
+        transform: translate(-16px, -32px);
+        font-size: 12px;
+        cursor: default;
+      }
+    }
+    &:focus {
+      border: 1px solid $main-color;
+      outline: none;
+      padding-left: 42px;
+      &:not([type="checkbox"]) ~ span {
+        transform: translate(-16px, -32px);
+        color: $main-color;
+        font-size: 12px;
+      }
+      & + .modal-icon {
+        fill: $main-color;
+      }
+    }
+  }
+}
+.modal > span {
+  position: absolute;
+  left: 42px;
+  top: 12px;
+  transition: $transition-fuction;
+  will-change: transform;
+  cursor: text;
+}
+.modal-group .textarea > span {
+  left: 16px;
+  cursor: text;
+}
+.modal-header {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.02em;
+  color: $title-color;
+  margin-bottom: 30px;
+}
+.modal {
+  position: relative;
+  display: flex;
+  align-items: center;
+  &:not(.textarea) {
+    margin-bottom: 28px;
+  }
+}
+.modal-icon {
+  position: absolute;
+  left: 16px;
+  fill: $title-color;
+  width: 18px;
+  height: 18px;
+  transition: fill $transition-fuction;
+}
+.close-icon {
+  width: 11px;
+  height: 11px;
+}
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  display: block;
+  padding: 9px;
+  line-height: 0;
+  border: 1px solid $close-button-border-color;
+  transition: fill $transition-fuction, border $transition-fuction;
+  &:hover {
+    fill: $main-color;
+  }
+}
+.modal-group .submit-button > a {
+  padding: 10px 55px;
+}
+.pseudo-check:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 4px;
+  left: 0px;
+  border: 1px solid $ckeckbox-border-color;
+  border-radius: 2px;
+  transition: background $transition-fuction, border $transition-fuction;
+}
+.modal-check {
+  cursor: pointer;
+  line-height: 24px;
+  margin-bottom: 30px;
+  position: relative;
+  a {
+    text-decoration: underline;
+    color: $main-color;
+  }
+  span {
+    margin-left: 7px;
+  }
+  input {
+    opacity: 0;
+    &:checked + .pseudo-check:before {
+      background: $main-color url("../img/checkbox-icon.svg") center no-repeat;
+      border: 1px solid $main-color;
+      background-size: contain;
+    }
+  }
+  &:hover .pseudo-check:before,
+  &:focus-within .pseudo-check:before {
+    border: 1px solid $main-color;
+  }
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  .modal-group {
+    transform: scale(0);
+  }
+}
