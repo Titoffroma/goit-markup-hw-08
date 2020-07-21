@@ -67,39 +67,53 @@
       </form>
     </div>
     <header>
-      <div class="container">
+      <div>
         <a class="logo" href="./index.html">Web <span>Studio</span></a>
-        <nav>
-          <ul class="header-menu-list">
-            <li class="header-menu-listitem">
-              <a class="actual-page" href="./index.html">Студия</a>
-            </li>
-            <li class="header-menu-listitem">
-              <a href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="header-menu-listitem"><a href="">Контакты</a></li>
-          </ul>
-        </nav>
-        <address class="header-contacts-list">
-          <ul class="header-contacts-list">
-            <li class="header-contacts-listitem">
-              <a href="mailto:info@devstudio.com"
-                ><svg class="header-adress-icon">
-                  <use href="./img/sprite.svg#envelope"></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-            <li class="header-contacts-listitem">
-              <a href="tel:+380961111111"
-                ><svg class="header-adress-icon">
-                  <use href="./img/sprite.svg#smartphone"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-        </address>
+        <button class="drop-down-button" data-drop-open>
+          <svg class="drop-down-icon">
+            <use href="./img/sprite.svg#drop-down-icon"></use>
+          </svg>
+        </button>
+        <div class="is-hidden" data-drop>
+          <div class="drop-down-menu">
+            <button class="drop-down-close-button" data-drop-close>
+              <svg class="drop-down-close-icon">
+                <use href="./img/sprite.svg#drop-down-close-icon"></use>
+              </svg>
+            </button>
+            <nav>
+              <ul class="header-menu-list">
+                <li class="header-menu-listitem">
+                  <a class="actual-page" href="./index.html">Студия</a>
+                </li>
+                <li class="header-menu-listitem">
+                  <a href="./portfolio.html">Портфолио</a>
+                </li>
+                <li class="header-menu-listitem"><a href="">Контакты</a></li>
+              </ul>
+            </nav>
+            <address>
+              <ul class="header-contacts-list">
+                <li class="header-contacts-listitem">
+                  <a href="mailto:info@devstudio.com"
+                    ><svg class="header-adress-icon">
+                      <use href="./img/sprite.svg#envelope"></use>
+                    </svg>
+                    info@devstudio.com</a
+                  >
+                </li>
+                <li class="header-contacts-listitem">
+                  <a href="tel:+380961111111"
+                    ><svg class="header-adress-icon">
+                      <use href="./img/sprite.svg#smartphone"></use>
+                    </svg>
+                    +38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -453,5 +467,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/drop-down.js"></script>
   </body>
 </html>

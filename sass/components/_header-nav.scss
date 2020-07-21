@@ -1,13 +1,14 @@
 .header-menu-list {
   display: flex;
-  margin-left: 85px;
-  & :not(:first-child) {
-    margin-left: 50px;
-  }
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0px;
 }
 
 .header-menu-listitem {
-  display: block;
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
 }
 
 .header-menu-list a {
@@ -17,7 +18,6 @@
   font-size: 14px;
   transition: color $transition-fuction;
   display: flex;
-  padding: 32px 0px;
   &:hover,
   &:focus {
     color: $main-color;
@@ -27,6 +27,7 @@
 .header-menu-list .actual-page {
   position: relative;
   color: $main-color;
+  padding: 12px 0px;
   &:after {
     content: "";
     position: absolute;
@@ -36,5 +37,22 @@
     background: $main-color;
     border-radius: 2px;
     height: 4px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-menu-list {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0px 0px;
+  }
+  .header-menu-listitem {
+    &:not(:last-child) {
+      margin-right: 50px;
+      margin-bottom: 0px;
+    }
+    & .actual-page {
+      padding: 32px 0px;
+    }
   }
 }
