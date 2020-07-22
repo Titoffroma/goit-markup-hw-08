@@ -27,7 +27,7 @@
     text-align: center;
   }
 }
-@include Cardset-Adaptive-480-768-1200(".our-team-list", 480px, 0px, 30px, 1);
+@include Cardset-Adaptive-480-768-1200(".our-team-list", 1px, 0px, 30px, 1);
 
 @include Cardset-Adaptive-480-768-1200(".our-team-list", 768px, 30px, 30px, 2);
 

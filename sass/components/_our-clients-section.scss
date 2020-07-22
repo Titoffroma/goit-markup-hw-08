@@ -1,10 +1,4 @@
-@include Cardset-Adaptive-480-768-1200(
-  ".our-clients-list",
-  480px,
-  30px,
-  30px,
-  2
-);
+@include Cardset-Adaptive-480-768-1200(".our-clients-list", 1px, 30px, 30px, 2);
 
 @include Cardset-Adaptive-480-768-1200(
   ".our-clients-list",
