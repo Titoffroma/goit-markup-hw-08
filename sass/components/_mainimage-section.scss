@@ -13,10 +13,16 @@
     color: $white-color;
     font-family: $main-font;
     font-weight: 700;
-    font-size: 44px;
+    font-size: 26px;
     text-transform: uppercase;
     margin-bottom: 30px;
-    width: 650px;
+    max-width: 650px;
     text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .mainimage h1 {
+    font-size: 44px;
   }
 }

@@ -37,6 +37,9 @@ header .logo {
 
 header > div {
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -354,11 +357,17 @@ section h2 {
   color: #ffffff;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: 44px;
+  font-size: 26px;
   text-transform: uppercase;
   margin-bottom: 30px;
-  width: 650px;
+  max-width: 650px;
   text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .mainimage h1 {
+    font-size: 44px;
+  }
 }
 
 .our-benefits-list {
@@ -940,6 +949,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
 .input-group {
@@ -954,16 +964,17 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 20px;
+  width: 100%;
 }
 
 .input-group input {
-  width: 450px;
+  width: 100%;
+  max-width: 358px;
   height: 50px;
   margin-bottom: 20px;
   background: none;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  width: 358px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   font-family: "Roboto", sans-serif;
@@ -1059,7 +1070,8 @@ footer {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
-  width: 370px;
+  width: 100%;
+  max-width: 370px;
   margin-bottom: 20px;
   padding: 12px 16px;
   -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1097,7 +1109,8 @@ footer {
 .modal-group input:not([type="checkbox"]) {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  width: 370px;
+  width: 100%;
+  max-width: 370px;
   height: 40px;
   -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1157,10 +1170,11 @@ footer {
   letter-spacing: 0.02em;
   color: #212121;
   margin-bottom: 30px;
-  width: 370px;
+  max-width: 370px;
 }
 
 .modal {
+  width: 100%;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1271,13 +1285,13 @@ footer {
     font-size: 14px;
   }
   .modal-header {
-    width: 448px;
+    max-width: 448px;
   }
   .modal-group textarea {
-    width: 448px;
+    max-width: 448px;
   }
   .modal-group input:not([type="checkbox"]) {
-    width: 448px;
+    max-width: 448px;
   }
 }
 

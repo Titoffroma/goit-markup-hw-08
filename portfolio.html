@@ -15,18 +15,8 @@
     <header>
       <div>
         <a class="logo" href="./index.html">Web <span>Studio</span></a>
-        <button class="drop-down-button" data-drop-open>
-          <svg class="drop-down-icon">
-            <use href="./img/sprite.svg#drop-down-icon"></use>
-          </svg>
-        </button>
         <div class="is-hidden" data-drop>
           <div class="drop-down-menu">
-            <button class="drop-down-close-button" data-drop-close>
-              <svg class="drop-down-close-icon">
-                <use href="./img/sprite.svg#drop-down-close-icon"></use>
-              </svg>
-            </button>
             <nav>
               <ul class="header-menu-list">
                 <li class="header-menu-listitem">
@@ -38,7 +28,7 @@
                 <li class="header-menu-listitem"><a href="">Контакты</a></li>
               </ul>
             </nav>
-            <address class="header-contacts-list">
+            <address>
               <ul class="header-contacts-list">
                 <li class="header-contacts-listitem">
                   <a href="mailto:info@devstudio.com"
@@ -60,6 +50,15 @@
             </address>
           </div>
         </div>
+        <button class="drop-down-button" data-drop-open>
+          <svg class="drop-down-icon">
+            <use class="open" href="./img/sprite.svg#drop-down-icon"></use>
+            <use
+              class="close"
+              href="./img/sprite.svg#drop-down-close-icon"
+            ></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -274,7 +273,7 @@
           </ul>
         </div>
         <div>
-          <form method="get">
+          <form class="footer-form" method="get">
             <label class="footer-list-item" for="mail-input"
               >Подпишитесь на рассылку</label
             >
