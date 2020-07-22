@@ -1,18 +1,65 @@
 footer {
   background-color: #2f303a;
-  padding: 45px 0px 60px;
+  padding: 60px 0px;
 }
 .footer-list {
   display: flex;
-  align-items: baseline;
-  & > div:not(:last-child) {
-    width: calc((100% - 60px) / 4);
-    margin-right: 30px;
+  flex-wrap: wrap;
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
-  & > div:last-child {
-    width: calc((100% - 60px) / 2);
+  & > div:not(:last-child) {
+    margin-bottom: 60px;
   }
 }
+
+.footer-contacts-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-list {
+    & > div:not(:last-child) {
+      width: calc(50% - 30px);
+      margin-right: 0px;
+      margin-bottom: 60px;
+    }
+    & > div:first-child {
+      margin-right: 30px;
+    }
+    & > div:last-child {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-list {
+    flex-wrap: nowrap;
+    align-items: baseline;
+    justify-content: flex-start;
+    & > div {
+      display: block;
+    }
+    & > div:not(:last-child) {
+      width: calc((100% - 60px) / 4);
+      margin-right: 30px;
+      margin-bottom: 0px;
+    }
+    & > div:last-child {
+      width: calc((100% - 60px) / 2);
+    }
+    .footer-contacts-list {
+      display: block;
+    }
+  }
+}
+
 .footer-social {
   margin-top: 20px;
   justify-content: flex-start;

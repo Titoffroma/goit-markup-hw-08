@@ -1,8 +1,18 @@
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .input-group {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 20px;
   input {
-    margin-right: 12px;
+    width: 450px;
+    height: 50px;
+    margin-bottom: 20px;
     background: none;
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -15,6 +25,21 @@
     letter-spacing: 0.03em;
     color: $input-text-color;
     text-indent: 16px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-form {
+    display: block;
+    & .input-group {
+      flex-direction: row;
+    }
+    & input {
+      width: 358px;
+      height: 50px;
+      margin-bottom: 0px;
+      margin-right: 12px;
+    }
   }
 }
 
