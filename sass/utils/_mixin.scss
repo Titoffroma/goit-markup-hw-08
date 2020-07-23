@@ -10,8 +10,26 @@
   $Columns
 ) {
   $margin-in-row: Margin-in-row($Margin-right, $Columns);
-  @if ($Columns == 0) {
-    $Columns: #{$Columns} + 1;
+  @if ($ScreenWidth < 1200 and $ScreenWidth > 767) {
+    @media screen and (min-width: #{$ScreenWidth}), (orientation: landscape) {
+      #{$ClassName} {
+        display: flex;
+        flex-wrap: wrap;
+        & > li {
+          width: calc((100% - #{$margin-in-row}) / #{$Columns});
+          &:nth-child(n) {
+            margin-right: $Margin-right;
+            margin-bottom: $Margin-bottom;
+          }
+          &:nth-child(#{$Columns}n) {
+            margin-right: 0px;
+          }
+          &:nth-last-child(-n + #{$Columns}) {
+            margin-bottom: 0px;
+          }
+        }
+      }
+    }
   } @else {
     @if ($ScreenWidth > 0) {
       @media screen and (min-width: #{$ScreenWidth}) {
