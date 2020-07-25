@@ -2,7 +2,8 @@
   color: $main-color;
   font-family: $logo-font;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
+  flex-shrink: 0;
 
   & > span {
     color: $black-color;
@@ -11,6 +12,13 @@
     color: $white-color;
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+  }
+}
+
 header .logo {
   position: relative;
   z-index: 10000;

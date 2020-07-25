@@ -47,12 +47,11 @@ footer {
       display: block;
     }
     & > div:not(:last-child) {
-      width: calc((100% - 60px) / 4);
-      margin-right: 30px;
+      width: calc(100% / 4);
       margin-bottom: 0px;
     }
     & > div:last-child {
-      width: calc((100% - 60px) / 2);
+      width: calc(100% / 2);
     }
     .footer-contacts-list {
       display: block;

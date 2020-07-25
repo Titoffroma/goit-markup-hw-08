@@ -13,7 +13,7 @@
   width: 100%;
   input {
     width: 100%;
-    max-width: 358px;
+    max-width: 450px;
     height: 50px;
     margin-bottom: 20px;
     background: none;
@@ -35,12 +35,12 @@
     display: block;
     & .input-group {
       flex-direction: row;
-    }
-    & input {
-      width: 358px;
-      height: 50px;
-      margin-bottom: 0px;
-      margin-right: 12px;
+      input {
+        max-width: 358px;
+        height: 50px;
+        margin-bottom: 0px;
+        margin-right: 12px;
+      }
     }
   }
 }

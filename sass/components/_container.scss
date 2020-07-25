@@ -4,7 +4,7 @@
   margin: 0px auto 0px;
 }
 .container-padding {
-  padding: 94px 0px 94px;
+  padding: 60px 0px;
 }
 .cropped-container {
   padding-top: 0px;
@@ -14,12 +14,28 @@ section h2 {
   font-family: $main-font;
   font-weight: 700;
   font-size: 36px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   line-height: 42px;
   text-align: center;
   letter-spacing: 0.03em;
 }
 .portfolio {
-  padding: 94px 0px 94px;
+  padding: 40px 0px 60px;
   border-top: 1px solid #ececec;
+}
+@media screen and (min-width: 768px) {
+  .portfolio {
+    padding: 60px 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container-padding {
+    padding: 94px 0px;
+  }
+  section h2 {
+    margin-bottom: 50px;
+  }
+  .portfolio {
+    padding: 94px 0px;
+  }
 }

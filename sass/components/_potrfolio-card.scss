@@ -48,6 +48,9 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 36px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     & + p {
       color: $text-color;
       font-family: $main-font;
